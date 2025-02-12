@@ -5,7 +5,7 @@ This is a fully functional e-commerce website built with **Node.js**, **Express.
 ## Features
 
 - **Owner Creation and Environment Variables**:
-  - The website owner can only be created in the development state using environment variables and configuration files, ensuring a secure and controlled environment setup.
+  - The website owner can only be created in the development state using environment variables and config, ensuring a secure and controlled environment setup.
   
 - **Separation of Concerns**:
   - Implemented **separation of concerns** for better maintainability and readability of code.
