@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Product</title>
+    <style>
+        /* Global styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        /* Form container styling */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .form-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .form-box h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Input field styling */
+        input[type="text"] {
+            width: 100%;
+            height: 35px;
+            padding: 4px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 5px;
+            height: 55px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        input[type="submit"]:active {
+            background-color: #1e7e34;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .form-box {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="/shop" style="border:solid rgb(255, 170, 0) 3px; padding: 2px;color: black;background-color:rgb(255, 170, 0);text-decoration: none;margin-left: 5px; border-radius: 4px;">Back to shop</a>
+    <h1>Review Product</h1>
+    
+    <!-- Form container -->
+    <div class="form-container">
+        <div class="form-box">
+            <h2>Submit Your Review</h2>
+            <form action="/review/<%= product._id %>" method="post">
+                <!-- Review input field -->
+                <input type="text" name="review" placeholder="Enter your review here..." required>
+                <!-- Submit button -->
+                <input type="submit" value="Add Review">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

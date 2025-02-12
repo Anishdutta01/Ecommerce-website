@@ -1,0 +1,38 @@
+<%- include('../partials/header.ejs') %>
+<head>
+    <link rel="stylesheet" href="../stylesheets/homepage.css">
+</head>
+<body>
+    
+
+    
+       <p style="color: white;font:arial;">
+            <% if(err.length>0) { %>
+                <%= err%>
+            <% } %>
+       </p> 
+       <p style="color: white;font:arial;">
+        <% if(good.length>0) { %>
+            <%= good%>
+        <% } %>
+        </p> 
+    
+        <div class="a">
+            <form action="/users/register" method="post">
+                <input type="text" placeholder="full name" name="fullname"  class="b">
+                <input type="email" placeholder="enter email" name="email" class="b">
+                <input type="password" placeholder="password" name="password" class="b">
+                <input type="submit" value="Register" class="b" id="b">
+            </form>
+        </div>
+        <pre style="margin-left: 512px;color: rgb(255, 140, 0);">Already have an account?</pre>
+        <div class="c">
+            <form action="/users/login" method="post">
+                <input type="email" placeholder="Enter email" name="email" style="display: block;" class="b">
+                <input type="password" placeholder="Enter password" name="password" style="display: block;" class="b">
+                <input type="submit" value="Login" id="c">
+            </form>
+        </div>
+    
+</body>
+<%- include('../partials/footer.ejs') %>

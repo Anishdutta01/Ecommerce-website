@@ -1,0 +1,138 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/owner/create" method="post">
+        <input type="text" placeholder="Enter name">
+        <input type="email" placeholder="Enter email">
+        <input type="password" placeholder="Enter password">
+        <input type="submit" value="Create owner">
+    </form>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Owner</title>
+    <style>
+        /* Global styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        /* Form container styling */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .form-box {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .form-box h2 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Input field styling */
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 2px;
+            height: 35px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 2px;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        input[type="submit"]:active {
+            background-color: #1e7e34;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .form-box {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Create Owner</h1>
+
+    <!-- Form container -->
+    <div class="form-container">
+        <div class="form-box">
+            <h2>Enter Owner Details</h2>
+            <form action="/owner/create" method="post">
+                <!-- Name input field -->
+                <input type="text" name="name" placeholder="Enter name" required>
+
+                <!-- Email input field -->
+                <input type="email" name="email" placeholder="Enter email" required>
+
+                <!-- Password input field -->
+                <input type="password" name="password" placeholder="Enter password" required>
+
+                <!-- Submit button -->
+                <input type="submit" value="Create Owner">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+body{
+    background-color: rgba(0, 0, 0, 0.888);
+    
+}
+.a{
+    width: 300px;
+    height: 250px;
+    
+    margin-left: 512px;
+    margin-top: 150px;
+    
+    
+}
+
+.b{
+    margin-top: 5px;margin-bottom: 5px; width: 250px;
+    height: 40px;
+    border: none;
+}
+#b{
+    background-color:rgba(29, 91, 250, 0.878) ;
+    width: 256px;
+    color: white;
+}
+#b:hover{
+    background-color: rgb(28, 222, 28);
+}
+.c{
+    margin-left: 512px;
+    
+}
+#c{
+    background-color:rgba(29, 91, 250, 0.878)  ;
+    width: 256px;
+    color: white;
+    height: 40px;
+}
+#c:hover{
+    background-color: rgb(28, 222, 28);
+}

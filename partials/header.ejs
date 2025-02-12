@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #a:hover{
+            transform: scale(1.5);
+        }
+        .b:hover{
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <% var loggedin = typeof loggedin!=="undefined" ? loggedin:true %>
+        <% if(loggedin){ %>
+            <div style="display: flex ;">
+                
+                
+                <a href="/cart" style="margin-left: 5px;margin-right: 5px;color: black;"class="b">My Cart</a>
+                
+                <a href="/users/logout" style="background-color: rgba(247, 10, 10, 0.962); border:solid red 2px;padding: 1px;color: white; border-radius: 2px; margin-left: 8px;" id="a">Logout</a>
+            </div>
+        <% } %>
+        
+    </nav>
+    
+    
+</body>
+</html>

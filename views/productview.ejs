@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        /* Global styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Product container styling */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 20px;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            margin: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #f4f4f9;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .product-info pre {
+            font-size: 1rem;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Products</h1>
+
+    <!-- Product list -->
+    <div class="product-container">
+        <% products1.forEach(function(product) { %>
+            <div class="product">
+                <img src="data:image/jpeg;base64,<%= product.image.toString('base64') %>" alt="<%= product.name %>">
+                <div class="product-info">
+                    <h3>Name: <%= product.name %></h3>
+                    <pre>Price: <%= product.price %></pre>   
+                    <pre>Discount: <%= product.discount %></pre>
+                    <pre>Total price: <%= product.price - product.discount %></pre>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+
+</body>
+</html>

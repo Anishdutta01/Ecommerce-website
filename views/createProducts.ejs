@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <% if(success.length>0) {%>
+            <p><%= success %></p>
+        <% } %>
+    </div>
+    <div style="margin-left:25%;margin-top: 25px;">
+        
+        <a href="/owner/productview">All Products</a>
+        <a href="/shop"> Back to shop</a>
+        <h2>Create New Products</h2>
+        <h4>Product details</h4>
+        <h5>Product image</h5>
+    </div>
+    <form action="/products/create" method="post" enctype="multipart/form-data">
+        <input type="file" placeholder="Enter image" style="margin-left: 25%;" name="image">
+        
+    
+    
+        <div style="margin-left: 25%; margin-top: 15px;">
+            <input type="text" placeholder="Product name" style="width: 30%;height: 25px;" name="name">
+            <input type="number" placeholder="Product price" style="margin-left: 5%;width: 30%;height: 25px;" name="price">
+            <input type="number" placeholder="Discount price" style="display: block;margin-top: 15px;width: 30%;height: 25px;" name="discount">
+        </div>
+        <div style="margin-left: 25%;margin-top: 15px;">
+            <h4>Panel details</h4>
+            <input type="text" placeholder="Background color" name="bgcolor" style="width: 30%;height: 25px;">
+            <input type="text" placeholder="Panel color" name="panelcolor" style="margin-left: 5%;width: 30%;height: 25px;">
+            <input type="text" placeholder="Text Color" name="textcolor" style="margin-top: 15px;width:30%;height: 25px;display: block;">
+    
+        </div>
+         <input type="submit" value="Create product" style="margin-left: 25%;margin-top: 5px;height: 25px;background-color: rgba(255, 179, 0, 0.948); border: none;border-radius: 5px;">
+    </form>
+    
+
+
+</body>
+</html>
